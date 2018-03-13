@@ -1,0 +1,9 @@
+name: generic_ga
+version: 0.1.0
+
+authors:
+  - Henry <henriiiiiiiiiii@gmail.com>
+
+crystal: 0.24.1
+
+license: MIT
