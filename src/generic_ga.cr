@@ -85,11 +85,21 @@ module GenericGA
       end
       puts "--------------------------------------"
       puts "Grand Max Fitness: #{self.max_fitness}"
+      puts "Winning Genes:     #{self.max_agent}"
     end
 
     # Gets the fitness of the agent with the max fitness in the population.
     def max_fitness : Fitness
       @fitnesses.max
+    end
+
+    def max_agent : Agent
+      max = @population[0]
+      @population.map { |agent|
+        if agent.fitness > max.fitness
+          max = agent
+        end
+      }
     end
 
     # Picks two agents (weighted by fitness) from the population
