@@ -11,8 +11,6 @@ module GenericGA
   # Mutation chance
   MUTATION_CHANCE = 0.01
 
-  random = Random.new
-
   # Creates a random gene value.
   def make_random_gene : Gene
     Random.new.next_bool
