@@ -16,13 +16,17 @@ dependencies:
 
 ```crystal
 require "generic_ga"
+
+# make a world with 100 agents
+world = GenericGA::World.new 10 
+# simulate 100 selections, with console feedback
+world.simulate 100
 ```
 
-TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
+TODO
 
 ## Contributing
 
