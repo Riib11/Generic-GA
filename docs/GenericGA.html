@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/Riib11/Generic-GA">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/doc.js"></script>
+  <title>GenericGA - github.com/Riib11/Generic-GA</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/Riib11/Generic-GA/GenericGA" data-name="genericga">
+      <a href="GenericGA.html">GenericGA</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Agent" data-name="genericga::agent">
+      <a href="GenericGA/Agent.html">Agent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Chromosome" data-name="genericga::chromosome">
+      <a href="GenericGA/Chromosome.html">Chromosome</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Fitness" data-name="genericga::fitness">
+      <a href="GenericGA/Fitness.html">Fitness</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Gene" data-name="genericga::gene">
+      <a href="GenericGA/Gene.html">Gene</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/World" data-name="genericga::world">
+      <a href="GenericGA/World.html">World</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> GenericGA
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p><span class="flag orange">TODO</span>  Write documentation for <code><a href="GenericGA.html">GenericGA</a></code></p>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="GenericGA/Agent.html">GenericGA::Agent</a></li>
+  
+    <li class="other-type"><a href="GenericGA/World.html">GenericGA::World</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga/version.cr#L1" target="_blank">generic_ga/version.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L5" target="_blank">generic_ga.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="GENE_COUNT">
+        <strong>GENE_COUNT</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The number of genes in each chromosome</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="MUTATION_CHANCE">
+        <strong>MUTATION_CHANCE</strong> = <code><span class="n">0.01</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Mutation chance</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#bool_to_int%28b%3ABool%29%3AInt32-instance-method" class="signature"><strong>#bool_to_int</strong>(b : Bool) : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fitness_function%28chromosome%3AChromosome%29%3AFitness-instance-method" class="signature"><strong>#fitness_function</strong>(chromosome : Chromosome) : Fitness</a>
+        
+          <div class="summary"><p>Calculates the fitness of a given chromosome.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_chromosome%3AChromosome-instance-method" class="signature"><strong>#make_chromosome</strong> : Chromosome</a>
+        
+          <div class="summary"><p>Creates an empty chromosome (initialized array).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_random_chromosome%3AChromosome-instance-method" class="signature"><strong>#make_random_chromosome</strong> : Chromosome</a>
+        
+          <div class="summary"><p>Creates a chromosome filled with random gene values.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#make_random_gene%3AGene-instance-method" class="signature"><strong>#make_random_gene</strong> : Gene</a>
+        
+          <div class="summary"><p>Creates a random gene value.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mutate_gene%28g%3AGene%29%3AGene-instance-method" class="signature"><strong>#mutate_gene</strong>(g : Gene) : Gene</a>
+        
+          <div class="summary"><p>Mutates a gene</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="bool_to_int(b:Bool):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>bool_to_int</strong>(b : Bool) : Int32
+
+        <a class="method-permalink" href="#bool_to_int%28b%3ABool%29%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fitness_function(chromosome:Chromosome):Fitness-instance-method">
+      <div class="signature">
+        
+        def <strong>fitness_function</strong>(chromosome : <a href="GenericGA/Chromosome.html">Chromosome</a>) : <a href="GenericGA/Fitness.html">Fitness</a>
+
+        <a class="method-permalink" href="#fitness_function%28chromosome%3AChromosome%29%3AFitness-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Calculates the fitness of a given chromosome.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_chromosome:Chromosome-instance-method">
+      <div class="signature">
+        
+        def <strong>make_chromosome</strong> : <a href="GenericGA/Chromosome.html">Chromosome</a>
+
+        <a class="method-permalink" href="#make_chromosome%3AChromosome-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates an empty chromosome (initialized array).</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_random_chromosome:Chromosome-instance-method">
+      <div class="signature">
+        
+        def <strong>make_random_chromosome</strong> : <a href="GenericGA/Chromosome.html">Chromosome</a>
+
+        <a class="method-permalink" href="#make_random_chromosome%3AChromosome-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a chromosome filled with random gene values.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="make_random_gene:Gene-instance-method">
+      <div class="signature">
+        
+        def <strong>make_random_gene</strong> : <a href="GenericGA/Gene.html">Gene</a>
+
+        <a class="method-permalink" href="#make_random_gene%3AGene-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a random gene value.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mutate_gene(g:Gene):Gene-instance-method">
+      <div class="signature">
+        
+        def <strong>mutate_gene</strong>(g : <a href="GenericGA/Gene.html">Gene</a>) : <a href="GenericGA/Gene.html">Gene</a>
+
+        <a class="method-permalink" href="#mutate_gene%28g%3AGene%29%3AGene-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Mutates a gene</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

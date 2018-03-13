@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/Riib11/Generic-GA">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>GenericGA::World - github.com/Riib11/Generic-GA</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/Riib11/Generic-GA/GenericGA" data-name="genericga">
+      <a href="../GenericGA.html">GenericGA</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Agent" data-name="genericga::agent">
+      <a href="../GenericGA/Agent.html">Agent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Chromosome" data-name="genericga::chromosome">
+      <a href="../GenericGA/Chromosome.html">Chromosome</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Fitness" data-name="genericga::fitness">
+      <a href="../GenericGA/Fitness.html">Fitness</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Gene" data-name="genericga::gene">
+      <a href="../GenericGA/Gene.html">Gene</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/Riib11/Generic-GA/GenericGA/World" data-name="genericga::world">
+      <a href="../GenericGA/World.html">World</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> GenericGA::World
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../GenericGA/World.html">GenericGA::World</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../GenericGA.html">GenericGA</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L71" target="_blank">generic_ga.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28size%3AInt32%29-class-method" class="signature"><strong>.new</strong>(size : Int32)</a>
+        
+          <div class="summary"><p>Initialized population with random agents, and an array to keep track of their fitnesses.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#crossover%28p1%2Cp2%3AInt32%29%3ANil-instance-method" class="signature"><strong>#crossover</strong>(p1, p2 : Int32) : Nil</a>
+        
+          <div class="summary"><p>Exchanges some genes between two agents's chromosomes</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fitnesses%3AArray%28Int32%29-instance-method" class="signature"><strong>#fitnesses</strong> : Array(Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_fitness%3AFitness-instance-method" class="signature"><strong>#max_fitness</strong> : Fitness</a>
+        
+          <div class="summary"><p>Gets the fitness of the agent with the max fitness in the population.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mutate%28g%3AGene%29%3AGene-instance-method" class="signature"><strong>#mutate</strong>(g : Gene) : Gene</a>
+        
+          <div class="summary"><p>Chance of mutating a gene.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#population%3AArray%28GenericGA%3A%3AAgent%29-instance-method" class="signature"><strong>#population</strong> : Array(GenericGA::Agent)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#selection%3ANil-instance-method" class="signature"><strong>#selection</strong> : Nil</a>
+        
+          <div class="summary"><p>Picks two agents (weighted by fitness) from the population to reproduce, yielding two new agents that replace them</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#simulate%28steps%3AInt32%29-instance-method" class="signature"><strong>#simulate</strong>(steps : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size%3AInt32-instance-method" class="signature"><strong>#size</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_fitness%28i%3AInt32%29%3ANil-instance-method" class="signature"><strong>#update_fitness</strong>(i : Int32) : Nil</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../GenericGA.html">GenericGA</a></code></h3>
+  
+  
+    <a href="../GenericGA.html#bool_to_int%28b%3ABool%29%3AInt32-instance-method" class="tooltip">
+      <span>bool_to_int(b : Bool) : Int32</span>
+    bool_to_int</a>, 
+    
+  
+    <a href="../GenericGA.html#fitness_function%28chromosome%3AChromosome%29%3AFitness-instance-method" class="tooltip">
+      <span>fitness_function(chromosome : Chromosome) : Fitness</span>
+    fitness_function</a>, 
+    
+  
+    <a href="../GenericGA.html#make_chromosome%3AChromosome-instance-method" class="tooltip">
+      <span>make_chromosome : Chromosome</span>
+    make_chromosome</a>, 
+    
+  
+    <a href="../GenericGA.html#make_random_chromosome%3AChromosome-instance-method" class="tooltip">
+      <span>make_random_chromosome : Chromosome</span>
+    make_random_chromosome</a>, 
+    
+  
+    <a href="../GenericGA.html#make_random_gene%3AGene-instance-method" class="tooltip">
+      <span>make_random_gene : Gene</span>
+    make_random_gene</a>, 
+    
+  
+    <a href="../GenericGA.html#mutate_gene%28g%3AGene%29%3AGene-instance-method" class="tooltip">
+      <span>mutate_gene(g : Gene) : Gene</span>
+    mutate_gene</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(size:Int32)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(size : Int32)
+
+        <a class="method-permalink" href="#new%28size%3AInt32%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Initialized population with random agents, and an array to keep track of their fitnesses.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="crossover(p1,p2:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>crossover</strong>(p1, p2 : Int32) : Nil
+
+        <a class="method-permalink" href="#crossover%28p1%2Cp2%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Exchanges some genes between two agents's chromosomes</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fitnesses:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>fitnesses</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#fitnesses%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_fitness:Fitness-instance-method">
+      <div class="signature">
+        
+        def <strong>max_fitness</strong> : <a href="../GenericGA/Fitness.html">Fitness</a>
+
+        <a class="method-permalink" href="#max_fitness%3AFitness-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Gets the fitness of the agent with the max fitness in the population.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mutate(g:Gene):Gene-instance-method">
+      <div class="signature">
+        
+        def <strong>mutate</strong>(g : <a href="../GenericGA/Gene.html">Gene</a>) : <a href="../GenericGA/Gene.html">Gene</a>
+
+        <a class="method-permalink" href="#mutate%28g%3AGene%29%3AGene-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Chance of mutating a gene.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="population:Array(GenericGA::Agent)-instance-method">
+      <div class="signature">
+        
+        def <strong>population</strong> : Array(<a href="../GenericGA/Agent.html">GenericGA::Agent</a>)
+
+        <a class="method-permalink" href="#population%3AArray%28GenericGA%3A%3AAgent%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="selection:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>selection</strong> : Nil
+
+        <a class="method-permalink" href="#selection%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Picks two agents (weighted by fitness) from the population
+to reproduce, yielding two new agents that replace them</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="simulate(steps:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>simulate</strong>(steps : Int32)
+
+        <a class="method-permalink" href="#simulate%28steps%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong> : Int32
+
+        <a class="method-permalink" href="#size%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_fitness(i:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>update_fitness</strong>(i : Int32) : Nil
+
+        <a class="method-permalink" href="#update_fitness%28i%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

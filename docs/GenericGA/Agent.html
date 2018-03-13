@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/Riib11/Generic-GA">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>GenericGA::Agent - github.com/Riib11/Generic-GA</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/Riib11/Generic-GA/GenericGA" data-name="genericga">
+      <a href="../GenericGA.html">GenericGA</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/Riib11/Generic-GA/GenericGA/Agent" data-name="genericga::agent">
+      <a href="../GenericGA/Agent.html">Agent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Chromosome" data-name="genericga::chromosome">
+      <a href="../GenericGA/Chromosome.html">Chromosome</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Fitness" data-name="genericga::fitness">
+      <a href="../GenericGA/Fitness.html">Fitness</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/Gene" data-name="genericga::gene">
+      <a href="../GenericGA/Gene.html">Gene</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Riib11/Generic-GA/GenericGA/World" data-name="genericga::world">
+      <a href="../GenericGA/World.html">World</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> GenericGA::Agent
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../GenericGA/Agent.html">GenericGA::Agent</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>An agent in the simulation. Has a chromosome and some useful functions.</p>
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../GenericGA.html">GenericGA</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L49" target="_blank">generic_ga.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28randomize%3Dfalse%29-class-method" class="signature"><strong>.new</strong>(randomize = <span class="n">false</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#chromosome%3AChromosome-instance-method" class="signature"><strong>#chromosome</strong> : Chromosome</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#chromosome%3D%28chromosome%3AChromosome%29-instance-method" class="signature"><strong>#chromosome=</strong>(chromosome : Chromosome)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dna%3AArray%28Int32%29-instance-method" class="signature"><strong>#dna</strong> : Array(Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fitness%3AFitness-instance-method" class="signature"><strong>#fitness</strong> : Fitness</a>
+        
+          <div class="summary"><p>Calculates agent's fitness</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../GenericGA.html">GenericGA</a></code></h3>
+  
+  
+    <a href="../GenericGA.html#bool_to_int%28b%3ABool%29%3AInt32-instance-method" class="tooltip">
+      <span>bool_to_int(b : Bool) : Int32</span>
+    bool_to_int</a>, 
+    
+  
+    <a href="../GenericGA.html#fitness_function%28chromosome%3AChromosome%29%3AFitness-instance-method" class="tooltip">
+      <span>fitness_function(chromosome : Chromosome) : Fitness</span>
+    fitness_function</a>, 
+    
+  
+    <a href="../GenericGA.html#make_chromosome%3AChromosome-instance-method" class="tooltip">
+      <span>make_chromosome : Chromosome</span>
+    make_chromosome</a>, 
+    
+  
+    <a href="../GenericGA.html#make_random_chromosome%3AChromosome-instance-method" class="tooltip">
+      <span>make_random_chromosome : Chromosome</span>
+    make_random_chromosome</a>, 
+    
+  
+    <a href="../GenericGA.html#make_random_gene%3AGene-instance-method" class="tooltip">
+      <span>make_random_gene : Gene</span>
+    make_random_gene</a>, 
+    
+  
+    <a href="../GenericGA.html#mutate_gene%28g%3AGene%29%3AGene-instance-method" class="tooltip">
+      <span>mutate_gene(g : Gene) : Gene</span>
+    mutate_gene</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(randomize=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(randomize = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#new%28randomize%3Dfalse%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="chromosome:Chromosome-instance-method">
+      <div class="signature">
+        
+        def <strong>chromosome</strong> : <a href="../GenericGA/Chromosome.html">Chromosome</a>
+
+        <a class="method-permalink" href="#chromosome%3AChromosome-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="chromosome=(chromosome:Chromosome)-instance-method">
+      <div class="signature">
+        
+        def <strong>chromosome=</strong>(chromosome : <a href="../GenericGA/Chromosome.html">Chromosome</a>)
+
+        <a class="method-permalink" href="#chromosome%3D%28chromosome%3AChromosome%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dna:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>dna</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#dna%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fitness:Fitness-instance-method">
+      <div class="signature">
+        
+        def <strong>fitness</strong> : <a href="../GenericGA/Fitness.html">Fitness</a>
+
+        <a class="method-permalink" href="#fitness%3AFitness-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Calculates agent's fitness</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Riib11/Generic-GA/blob/b69beecc86c845fbf57cb7dbb53105e17fbefc11/src/generic_ga.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
