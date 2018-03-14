@@ -6,10 +6,9 @@ module GenericGA
   alias Gene = Bool
   alias Chromosome = Array(Gene)
   alias Fitness = Int32
-  # The number of genes in each chromosome
-  GENE_COUNT = 20
-  # Mutation chance
-  MUTATION_CHANCE = 0.01
+  GENE_COUNT      = 100
+  MUTATION_CHANCE = 0.1
+  INHERIT_CHANCE  = 0.5
 
   # Creates a random gene value.
   def make_random_gene : Gene
@@ -85,7 +84,7 @@ module GenericGA
       end
       puts "--------------------------------------"
       puts "Grand Max Fitness: #{self.max_fitness}"
-      puts "Winning Genes:     #{self.max_agent}"
+      puts "Winning Genes:     #{self.max_agent.dna}"
     end
 
     # Gets the fitness of the agent with the max fitness in the population.
@@ -100,36 +99,57 @@ module GenericGA
           max = agent
         end
       }
+      max
+    end
+
+    def choose_parents : Tuple(Int32, Int32)
+      total_fitness = @fitnesses.sum
+      min_fitness = @fitnesses.min
+      random = Random.new
+
+      fitness_indecies = Array.new(@size) { |i| 0 }
+      i = 0
+      @fitnesses.map { |f|
+        total_fitness += f
+        fitness_indecies[i] = total_fitness
+        i += 1
+      }
+
+      # parent 1
+      choice1 = random.rand total_fitness
+      p1 = 0
+      i = 0
+      fitness_indecies.map { |f|
+        if f < choice1
+          p1 = i
+        end
+        i += 1
+      }
+
+      # parent 2
+      choice2 = random.rand total_fitness
+      while (choice2 - choice1).abs < min_fitness
+        choice2 = random.rand total_fitness
+      end
+      p2 = 0
+      i = 0
+      fitness_indecies.map { |f|
+        if f < choice2
+          p2 = i
+        end
+        i += 1
+      }
+
+      return p1, p2
     end
 
     # Picks two agents (weighted by fitness) from the population
     # to reproduce, yielding two new agents that replace them
     def selection : Nil
-      # pick parents (the top two agents)
-      max = self.max_fitness
-      second_max = 0
-      p1 = nil # first max agent
-      p2 = nil # second max agent
-      i = 0
-      @size.times do |i|
-        f = @population[i].fitness
-        if f == max
-          p1 = i
-        elsif f > second_max
-          p2 = i
-          second_max = f
-        end
-      end
-
-      # reproduce
-      case p1
-      when Int32
-        case p2
-        when Int32
-          # puts "parents: #{@population[p1].dna}, #{@population[p2].dna}"
-          crossover p1, p2
-        end
-      end
+      # parents
+      p1, p2 = choose_parents
+      # crossover
+      crossover p1, p2
     end
 
     def update_fitness(i : Int32) : Nil
@@ -139,19 +159,15 @@ module GenericGA
     # Exchanges some genes between two agents's chromosomes
     def crossover(p1, p2 : Int32) : Nil
       a, b = @population[p1], @population[p2]
-      # choose random pivot
-      pivot = Random.new.rand GENE_COUNT
-      pivot.times do |gene|
-        # trade gene i, with chance of mutation
-        tmp = a.chromosome[gene]
-        a.chromosome[gene] = mutate b.chromosome[gene]
-        b.chromosome[gene] = mutate tmp
-      end
-      # chance to mutate rest of genes as well
-      (GENE_COUNT - pivot).times do |i|
-        gene = i + pivot
-        a.chromosome[gene] = mutate a.chromosome[gene]
-        b.chromosome[gene] = mutate b.chromosome[gene]
+      random = Random.new
+
+      GENE_COUNT.times do |gene|
+        # trade half of genes (on average)
+        if random.rand < INHERIT_CHANCE
+          tmp = a.chromosome[gene]
+          a.chromosome[gene] = mutate b.chromosome[gene]
+          b.chromosome[gene] = mutate tmp
+        end
       end
 
       # update fitnesses
